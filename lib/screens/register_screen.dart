@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ScreenLogin extends StatefulWidget {
-  const ScreenLogin({Key? key}) : super(key: key);
+class ScreenRegister extends StatefulWidget {
+  const ScreenRegister({Key? key}) : super(key: key);
 
   @override
-  State<ScreenLogin> createState() => _ScreenLoginState();
+  State<ScreenRegister> createState() => _ScreenRegisterState();
 }
 
-class _ScreenLoginState extends State<ScreenLogin> {
+class _ScreenRegisterState extends State<ScreenRegister> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login Page"),
+        title: Text("Registration Page"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(
               Icons.account_circle,
@@ -29,11 +27,10 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 hintText: "Enter Your Username",
               ),
             ),
-            
             const TextField(
               decoration: InputDecoration(
-                labelText: "Password",
-                hintText: "Enter Your Password",
+                labelText: "Username",
+                hintText: "Enter Your Username",
               ),
             ),
             TextButton(

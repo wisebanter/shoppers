@@ -31,8 +31,8 @@ class _ScreenLoginState extends State<ScreenLogin> {
             ),
             const TextField(
               decoration: InputDecoration(
-                labelText: "Username",
-                hintText: "Enter Your Username",
+                labelText: "Password",
+                hintText: "Enter Your Password",
               ),
             ),
             TextButton(

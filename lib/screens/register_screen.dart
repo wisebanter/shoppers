@@ -12,7 +12,7 @@ class _ScreenRegisterState extends State<ScreenRegister> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registration Page"),
+        title: Text("Registration Form"),
       ),
       body: SingleChildScrollView(
         child: Column(

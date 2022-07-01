@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoppers/screens/login_screen.dart';
+import 'package:flutter_application_1/cars/homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+     
         primarySwatch: Colors.blue,
       ),
-      home: const ScreenLogin(),
+      home: const Homescreen(),
+      //cuz the homescreen constructor is parameterless
     );
   }
 }
+
+
+
+

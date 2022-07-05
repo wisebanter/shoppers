@@ -16,7 +16,16 @@ class EditTextInput extends StatelessWidget {
       decoration: InputDecoration(
         labelText: inputLabel,
         hintText: inputHint,
+        border: allBorder(Colors.green),
+        focusedBorder: allBorder(Colors.purple),
       ),
+    );
+  }
+
+  OutlineInputBorder allBorder(Color borderColor) {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(20),
+      borderSide: BorderSide(color: borderColor),
     );
   }
 }

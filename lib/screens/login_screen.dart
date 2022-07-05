@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoppers/screens/register_screen.dart';
+import 'package:shoppers/widgets/button_widget.dart';
 import 'package:shoppers/widgets/edit_text.dart';
 
 class ScreenLogin extends StatefulWidget {
@@ -42,28 +44,22 @@ class _ScreenLoginState extends State<ScreenLogin> {
               const SizedBox(
                 height: 10,
               ),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: "Sample",
-                  hintText: "This is a ample",
-                ),
-              ),
               const SizedBox(
                 height: 10,
               ),
-              TextButton(
-                onPressed: () {},
-                child: Container(
-                  width: 200,
-                  height: 50,
-                  decoration: const BoxDecoration(color: Colors.blue),
-                  child: const Center(
-                    child: Text(
-                      "Login",
-                      style: TextStyle(color: Colors.white),
+              ButtonInput(
+                btnLabel: "Login",
+                btnColor: Colors.green,
+                onButtonClick: () {
+                  //////////////////
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ScreenRegister(),
                     ),
-                  ),
-                ),
+                  );
+                  /////////////////
+                },
               ),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoppers/widgets/edit_text.dart';
 
 class ScreenLogin extends StatefulWidget {
   const ScreenLogin({Key? key}) : super(key: key);
@@ -23,18 +24,13 @@ class _ScreenLoginState extends State<ScreenLogin> {
               Icons.account_circle,
               size: 100,
             ),
-            const TextField(
-              decoration: InputDecoration(
-                labelText: "Username",
-                hintText: "Enter Your Username",
-              ),
+            const EditTextInput(
+              inputHint: "Enter Your Username",
+              inputLabel: "Username",
             ),
-            
-            const TextField(
-              decoration: InputDecoration(
-                labelText: "Password",
-                hintText: "Enter Your Password",
-              ),
+            const EditTextInput(
+              inputHint: "Enter Your Password",
+              inputLabel: "Password",
             ),
             TextButton(
               onPressed: () {},

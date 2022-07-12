@@ -5,14 +5,17 @@ class EditTextInput extends StatelessWidget {
     Key? key,
     required this.inputLabel,
     required this.inputHint,
+    this.controller,
   }) : super(key: key);
 
   final String inputLabel;
   final String inputHint;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       decoration: InputDecoration(
         labelText: inputLabel,
         hintText: inputHint,

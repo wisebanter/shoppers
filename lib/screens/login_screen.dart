@@ -11,6 +11,9 @@ class ScreenLogin extends StatefulWidget {
 }
 
 class _ScreenLoginState extends State<ScreenLogin> {
+  TextEditingController txtUsername = TextEditingController();
+  TextEditingController txtPassword = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,14 +30,16 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 Icons.account_circle,
                 size: 100,
               ),
-              const EditTextInput(
+              EditTextInput(
+                controller: txtUsername,
                 inputHint: "Enter Your Username",
                 inputLabel: "Username",
               ),
               const SizedBox(
                 height: 10,
               ),
-              const EditTextInput(
+              EditTextInput(
+                controller: txtPassword,
                 inputHint: "Enter Your Password",
                 inputLabel: "Password",
               ),
@@ -52,13 +57,18 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 btnColor: Colors.green,
                 onButtonClick: () {
                   //////////////////
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ScreenRegister(),
-                    ),
-                  );
-                  /////////////////
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const ScreenRegister(),
+                  //   ),
+                  // );
+                  // /////////////////
+
+                  Navigator.pushNamed(context, '/dash', arguments: {
+                    "user": txtUsername.text,
+                    "pass": txtPassword.text
+                  });
                 },
               ),
             ],

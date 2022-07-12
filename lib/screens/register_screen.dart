@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shoppers/screens/login_screen.dart';
 import 'package:shoppers/widgets/button_widget.dart';
 import 'package:shoppers/widgets/edit_text.dart';
 
@@ -66,15 +65,16 @@ class _ScreenRegisterState extends State<ScreenRegister> {
                 btnColor: Colors.green,
                 onButtonClick: () {
                   //////////////////
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ScreenLogin(),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => const ScreenLogin(),
+                  //   ),
+                  // );
                   /////////////////
                   ///
-                  ///
+
+                  Navigator.pushNamed(context, '/login');
                 },
               ),
             ],

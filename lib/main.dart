@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoppers/screens/dashboard.dart';
 import 'package:shoppers/screens/login_screen.dart';
+import 'package:shoppers/screens/register_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ScreenLogin(),
+      // home: const ScreenLogin(),
+
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const ScreenLogin(),
+        '/register': (context) => const ScreenRegister(),
+        '/dash': (context) => const ScreenDashboard(),
+      },
     );
   }
 }

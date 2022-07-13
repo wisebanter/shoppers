@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoppers/examples/form.dart';
+import 'package:shoppers/examples/reciever.dart';
 import 'package:shoppers/screens/dashboard.dart';
 import 'package:shoppers/screens/login_screen.dart';
 import 'package:shoppers/screens/register_screen.dart';
@@ -25,6 +27,10 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const ScreenLogin(),
         '/register': (context) => const ScreenRegister(),
         '/dash': (context) => const ScreenDashboard(),
+
+        // for reviews
+        '/form': (context) => const ScreenForm(),
+        '/reciever': (context) => const ScreenReciever()
       },
     );
   }

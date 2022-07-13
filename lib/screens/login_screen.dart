@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shoppers/screens/register_screen.dart';
 import 'package:shoppers/widgets/button_widget.dart';
 import 'package:shoppers/widgets/edit_text.dart';
 
